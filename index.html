@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Clash Royale Chess — Multiplayer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4/dist/socket.io.min.js"></script>
+</head>
+<body>
+    <header id="topbar">
+        <div class="logo">ClashRoyaleChess</div>
+        <div class="controls">
+            <label for="player-select">Player</label>
+            <select id="player-select">
+                <option value="1">Player 1 — Light</option>
+                <option value="2">Player 2 — Dark</option>
+            </select>
+            <button id="join-btn">Join</button>
+            <span id="status"></span>
+        </div>
+    </header>
+
+    <main id="main">
+        <aside id="leftbar">
+            <div class="elixir-title">Elixir</div>
+            <div id="elixir-bar"></div>
+        </aside>
+
+        <section id="board-area">
+            <div id="board-wrap">
+                <div id="ranks"></div>
+                <div id="board"></div>
+                <div id="files"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="mega-overlay" aria-hidden="true"><img src="/static/meganight_full.jpg" alt="MegaKnight"></div>
+
+    <audio id="meganight-sound" src="/static/meganight.mp3"></audio>
+    <script src="/static/script.js"></script>
+</body>
+</html>
